@@ -1,0 +1,28 @@
+Describe the fetch-execute cycle.
+The CPU reads instructions from memory one at a time and executes them.  The CPU begins by looking at the program counter, and fetching whatever number is stored in memory at the location specified.  It is then passed on to the instruction decoder which figures out what the instrution means.
+
+What is a register?  How would computation be more difficult without registers?
+A register is a special purpose storage location.  Without registers there is no dedicated/consistent location for computation.  Every time I needed to work with some bit pattern I would need to access it from a new memeory location which will change very often.  This is more complex than just having a registers.
+
+How do you represent numbers larger than 255?
+You can combine bytes to represent larger numbers.  Operations have to take this into account so the correct result is achieved.
+
+How big are the registers on the machines we will be using?
+4 bytes
+
+How does a computer know how to interpret a given byte or set of bytes of memory?
+It basically does not know how to interpret a particular bit pattern.  If the computer is told to use a bit pattern as an address and then told to use the same bit pattern as an ascii character the computer will not know the difference.
+
+What are the addressing modes and what are they used for?
+immediate addressing mode - the data to be accessed is embeded in the instruction itself.
+register addressing mode - the instuction contains a register to access, rather than a memory location.
+direct addressing mode - the instruction contains the memory address to access.
+indexed addressing mode - the instruction contains a memory address to access, and also specifies and index register to offset that address.
+indirect addressing mode - the instruction contains a register that contains a pointer to where the data should be accessed.
+base pointer addressing mode - similar to indirect addressing, but you also include a number called the offset to add to the register's value before using it for lookup.
+
+What does the instruction pointer do?
+Points to memory location that are about to be used as instructions.
+
+
+What data would you use in an employee record?
